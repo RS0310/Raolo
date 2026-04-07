@@ -1,4 +1,5 @@
 import heroPizza from "@/assets/hero-pizza.jpg";
+import logo from "@/assets/logo-raolos.png";
 
 const Hero = () => {
   return (
