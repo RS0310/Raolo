@@ -1,4 +1,5 @@
 import heroPizza from "@/assets/hero-pizza.jpg";
+import logo from "@/assets/logo-raolos.png";
 
 const Hero = () => {
   return (
@@ -14,8 +15,9 @@ const Hero = () => {
         <div className="absolute inset-0 bg-foreground/50" />
       </div>
 
-      <div className="relative z-10 text-center px-6">
-        <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-primary-foreground tracking-tight mb-4 animate-fade-in-up">
+      <div className="relative z-10 text-center px-6 flex flex-col items-center">
+        <img src={logo} alt="Raolo's Pizzeria" className="w-48 md:w-64 lg:w-72 mb-6 animate-fade-in-up drop-shadow-2xl" />
+        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground tracking-tight mb-4 animate-fade-in-up">
           RAOLO'S
         </h1>
         <p className="font-display text-xl md:text-2xl italic text-primary-foreground/80 mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>

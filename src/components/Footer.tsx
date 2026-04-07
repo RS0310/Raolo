@@ -1,13 +1,18 @@
+import logo from "@/assets/logo-raolos.png";
+
 const Footer = () => {
   return (
     <footer className="py-12 px-6 bg-foreground text-primary-foreground">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left">
-            <p className="font-display text-3xl font-bold tracking-tight mb-1">RAOLO'S</p>
-            <p className="font-body text-sm text-primary-foreground/60">
-              Pizza Artesanal Napolitana
-            </p>
+          <div className="flex items-center gap-4">
+            <img src={logo} alt="Raolo's Pizzeria" className="h-16 w-auto" />
+            <div>
+              <p className="font-display text-2xl font-bold tracking-tight">RAOLO'S</p>
+              <p className="font-body text-sm text-primary-foreground/60">
+                Pizza Artesanal Napolitana
+              </p>
+            </div>
           </div>
 
           <div className="flex items-center gap-8">
