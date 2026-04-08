@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
 import heroPizza from "@/assets/hero-pizza.jpg";
-import logo from "@/assets/logo-raolos.png";
 
 const Hero = () => {
   return (
-    <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={heroPizza}
@@ -16,7 +16,6 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 text-center px-6 flex flex-col items-center">
-        <img src={logo} alt="Raolo's Pizzeria" className="w-48 md:w-64 lg:w-72 mb-6 animate-fade-in-up drop-shadow-2xl" />
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground tracking-tight mb-4 animate-fade-in-up">
           RAOLO'S
         </h1>
@@ -24,18 +23,18 @@ const Hero = () => {
           Pizza Artesanal Napolitana
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-          <a
-            href="#menu"
+          <Link
+            to="/menu"
             className="px-8 py-3 bg-primary text-primary-foreground font-body text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors"
           >
             Ver Menú
-          </a>
-          <a
-            href="#reservar"
+          </Link>
+          <Link
+            to="/reservar"
             className="px-8 py-3 border border-primary-foreground/60 text-primary-foreground font-body text-sm tracking-widest uppercase hover:bg-primary-foreground/10 transition-colors"
           >
             Reservar
-          </a>
+          </Link>
         </div>
       </div>
     </section>
