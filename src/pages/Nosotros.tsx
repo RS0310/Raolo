@@ -61,10 +61,10 @@ const Nosotros = () => {
       <section className="pt-24 pb-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <p className="font-body text-sm tracking-widest uppercase text-primary mb-4">
-            Conócenos
+            Raolo's
           </p>
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-foreground leading-tight">
-            Nosotros
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight">
+            Nuestra Historia y Valores
           </h1>
         </div>
       </section>
