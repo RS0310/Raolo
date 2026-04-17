@@ -3,12 +3,44 @@ import Hero from "@/components/Hero";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import pizzasRow from "@/assets/pizzas-row.jpg";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+
+      {/* Welcome / Pizzas Row (estilo maria.pizza) */}
+      <section className="py-20 px-6 bg-card overflow-hidden">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="font-display text-5xl md:text-7xl font-semibold text-foreground tracking-tight mb-4">
+            RAOLO'S.
+          </h2>
+          <p className="font-body text-base md:text-lg text-muted-foreground mb-10">
+            En París a domicilio · En San Salvador para llevar o sobre la mesa.
+          </p>
+
+          <div className="-mx-6 md:-mx-12 mb-10">
+            <img
+              src={pizzasRow}
+              alt="Selección de pizzas napolitanas Raolo's"
+              width={1920}
+              height={704}
+              loading="lazy"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-4 font-body text-muted-foreground leading-relaxed text-lg">
+            <p>Una experiencia culinaria italiana inolvidable, de Nápoles a tu mesa.</p>
+            <p>
+              Nos hace ilusión recibirte en nuestra pizzería napolitana, cálida y cercana,
+              donde rendimos homenaje a la herencia de la auténtica pizza napolitana.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Teaser Nosotros */}
       <section className="py-24 px-6">

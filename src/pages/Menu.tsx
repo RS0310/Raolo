@@ -1,42 +1,87 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroPizza from "@/assets/hero-pizza.jpg";
+import sinsimba from "@/assets/pizzas/sinsimba.jpg";
+import cupido from "@/assets/pizzas/cupido.jpg";
+import diavola from "@/assets/pizzas/diavola.jpg";
+import prosciuttoFunghi from "@/assets/pizzas/prosciutto-funghi.jpg";
+import fratello from "@/assets/pizzas/fratello.jpg";
+import porcorosso from "@/assets/pizzas/porcorosso.jpg";
+import maiale from "@/assets/pizzas/maiale.jpg";
+import alba from "@/assets/pizzas/alba.jpg";
+import nuvole from "@/assets/pizzas/nuvole.jpg";
+import eva from "@/assets/pizzas/eva.jpg";
 
 const pizzas = [
   {
     name: "Sinsimba",
-    description: "Base de tomates italianos de Apulia, Fior di latte, Grana Padano DOP, albahaca fresca y aceite de oliva virgen extra.",
+    image: sinsimba,
+    description:
+      "Base de tomates italianos de Apulia, Fior di latte, Grana Padano DOP, albahaca fresca y AOVE.",
     price: "€13",
   },
   {
-    name: "Diavola / Brava",
-    description: "Tomate San Marzano DOP, Fior di latte, salame picante calabrés, albahaca fresca, aceite de oliva virgen extra.",
+    name: "Cupido",
+    image: cupido,
+    description:
+      "Datterini Caramella (tomate), Fior di latte, Cacioricotta del Cilento, albahaca fresca y AOVE.",
     price: "€14",
   },
   {
+    name: "Diavola",
+    image: diavola,
+    description:
+      "Tomate San Marzano DOP, Fior di latte, salame picante calabrés, albahaca fresca y AOVE.",
+    price: "€14",
+  },
+  {
+    name: "Prosciutto & Funghi",
+    image: prosciuttoFunghi,
+    description:
+      "Tomate San Marzano DOP, Fior di latte, Grana Padano AOP, prosciutto Cotto, funghi, albahaca fresca y AOVE.",
+    price: "€15",
+  },
+  {
+    name: "Fratello",
+    image: fratello,
+    description:
+      "Base de tomates italianos de Apulia, Fior di latte, spianata, Grana Padano DOP, albahaca fresca, pimiento amarillo asado/calabaza asada (según temporada), pesto casero (ajo y perejil) y aceitunas Peranzana.",
+    price: "€16",
+  },
+  {
+    name: "Porcorosso",
+    image: porcorosso,
+    description:
+      "San Marzano dell'Agro Sarnese-Nocerino DOP, Fior di latte, salsiccia rossa di Castelpoto, Cacioricotta del Cilento, albahaca fresca y AOVE.",
+    price: "€17",
+  },
+  {
     name: "Maiale",
-    description: "Base de crema de ricotta, fior di latte, Grana Padano DOP, prosciutto Cotto, pesto de pistacho, coulis frutos rojos, aceite de oliva virgen extra.",
+    image: maiale,
+    description:
+      "Base de crema de ricotta, Fior di latte, Grana Padano DOP, prosciutto Cotto, pesto de pistacho, coulis frutos rojos y AOVE.",
     price: "€16",
   },
   {
     name: "Alba",
-    description: "Base de crema de ricotta, fior di latte, Grana Padano DOP, aceitunas negras Peranzana, prosciutto Cotto a las hierbas, albahaca fresca y aceite de oliva virgen extra.",
+    image: alba,
+    description:
+      "Base de crema de ricotta, Fior di latte, Grana Padano DOP, aceitunas negras Peranzana, prosciutto Cotto a las hierbas, albahaca fresca y AOVE.",
     price: "€15",
   },
   {
     name: "Nuvole",
-    description: "Base cremosa de ricotta, provola, gorgonzola DOP, fior di latte, grana padano DOP, pimienta negra y albahaca fresca.",
+    image: nuvole,
+    description:
+      "Base cremosa de ricotta, provola, Gorgonzola DOP, Fior di latte, Grana Padano DOP, pimienta negra y albahaca fresca.",
     price: "€15",
   },
   {
     name: "Eva",
-    description: "Fior di latte, Grana Padano DOP, queso de cabra, Gorgonzola, gel de tatin, aceite oliva virgen extra.",
+    image: eva,
+    description:
+      "Base cremosa de ricotta, Fior di latte, Grana Padano DOP, queso de cabra, Gorgonzola, gel de tatin, almendras tostadas y AOVE.",
     price: "€16",
-  },
-  {
-    name: "Tris",
-    description: "Fior di latte, Grana Padano DOP, gorgonzola, queso de cabra, Scamorza affumicata, pera, miel, aceite de oliva virgen extra.",
-    price: "€17",
   },
 ];
 
@@ -77,31 +122,38 @@ const Menu = () => {
         </div>
       </section>
 
-      {/* Pizza List */}
+      {/* Pizza Grid */}
       <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-0">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16">
             {pizzas.map((pizza, i) => (
-              <div
-                key={i}
-                className="flex items-start justify-between py-8 border-b border-border last:border-0"
-              >
-                <div className="flex-1 pr-8">
-                  <h3 className="font-display text-2xl md:text-3xl font-medium text-foreground mb-2">
+              <article key={i} className="group">
+                <div className="aspect-square overflow-hidden bg-card mb-5">
+                  <img
+                    src={pizza.image}
+                    alt={`Pizza ${pizza.name}`}
+                    width={768}
+                    height={768}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex items-baseline justify-between mb-2 gap-4">
+                  <h3 className="font-display text-2xl font-medium text-foreground">
                     {pizza.name}
                   </h3>
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-xl">
-                    {pizza.description}
-                  </p>
+                  <span className="font-display text-xl font-medium text-primary shrink-0">
+                    {pizza.price}
+                  </span>
                 </div>
-                <span className="font-display text-2xl font-medium text-primary shrink-0 pt-1">
-                  {pizza.price}
-                </span>
-              </div>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  {pizza.description}
+                </p>
+              </article>
             ))}
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-16 text-center">
             <p className="font-body text-xs text-muted-foreground tracking-wide">
               * Precios orientativos. Todos nuestros ingredientes son importados directamente de Italia.
             </p>
