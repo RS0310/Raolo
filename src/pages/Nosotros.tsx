@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import SuppliersMap from "@/components/SuppliersMap";
+import SuppliersInnocent from "@/components/SuppliersInnocent";
 import aboutDough from "@/assets/about-dough.jpg";
 import ingredientsImg from "@/assets/ingredients.jpg";
 import { useState } from "react";
@@ -95,8 +95,8 @@ const Nosotros = () => {
           <p className="font-body text-sm tracking-widest uppercase text-primary mb-4">
             Raolo's
           </p>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight">
-            Nuestra Historia y Valores
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight uppercase tracking-wide">
+            NUESTRA HISTORIA Y VALORES
           </h1>
         </div>
       </section>
@@ -194,11 +194,11 @@ const Nosotros = () => {
               Del origen a tu mesa
             </h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              Pasa el cursor sobre los productos en el mapa para descubrir su origen.
+              Conoce el origen de cada uno de nuestros ingredientes. Haz clic en "Más info" para descubrir su historia.
             </p>
           </div>
 
-          <SuppliersMap suppliers={suppliers} />
+          <SuppliersInnocent suppliers={suppliers} />
         </div>
       </section>
 
