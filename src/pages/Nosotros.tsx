@@ -95,8 +95,8 @@ const Nosotros = () => {
           <p className="font-body text-sm tracking-widest uppercase text-primary mb-4">
             Raolo's
           </p>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight">
-            Nuestra Historia y Valores
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight uppercase tracking-wide">
+            NUESTRA HISTORIA Y VALORES
           </h1>
         </div>
       </section>
