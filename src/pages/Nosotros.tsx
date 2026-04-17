@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import SuppliersMap from "@/components/SuppliersMap";
+import SuppliersInnocent from "@/components/SuppliersInnocent";
 import aboutDough from "@/assets/about-dough.jpg";
 import ingredientsImg from "@/assets/ingredients.jpg";
 import { useState } from "react";
@@ -194,11 +194,11 @@ const Nosotros = () => {
               Del origen a tu mesa
             </h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              Pasa el cursor sobre los productos en el mapa para descubrir su origen.
+              Conoce el origen de cada uno de nuestros ingredientes. Haz clic en "Más info" para descubrir su historia.
             </p>
           </div>
 
-          <SuppliersMap suppliers={suppliers} />
+          <SuppliersInnocent suppliers={suppliers} />
         </div>
       </section>
 
